@@ -134,7 +134,7 @@ export function renderCost({ logoFile, label, value, periodLabel, brand, fetched
     logoEl(logoFile, SIZE / 2, 36, 42),
     textShadowed(nameStr, SIZE / 2, 88, 22, '600'),
     textShadowed(costStr, SIZE / 2, 138, 40, '700', 'middle', valueColor),
-    agoStr ? textShadowed(agoStr, SIZE / 2, 185, 15, '400') : '',
+    agoStr ? textShadowed(agoStr, SIZE / 2, 185, 20, '400') : '',
     staleIndicator,
   ].join('');
 

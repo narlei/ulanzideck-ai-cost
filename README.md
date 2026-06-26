@@ -1,10 +1,23 @@
-# AI Cost Monitor — UlanziDeck Plugin
+# AI Cost Monitor
 
-See how much you're spending on AI coding tools — right on your desk.
+**See exactly what you're spending on AI coding tools — on your physical desk.**
 
-One button per platform. Real dollar amounts. No API keys.
+Real dollar amounts. Per platform. Live progress bars. Zero API keys.
 
 ![Plugin in action](docs/example.png)
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)]()
+[![Node.js](https://img.shields.io/badge/node-%E2%89%A522-brightgreen.svg)]()
+[![UlanziDeck](https://img.shields.io/badge/UlanziDeck-plugin-orange.svg)]()
+
+---
+
+## Why this exists
+
+You open Claude Code, Cursor, or Codex and just... start coding. Hours later you wonder: *how much did that session cost me?*
+
+AI Cost Monitor puts the answer on a physical button in front of you — always visible, no app switching, no dashboards.
 
 ---
 
@@ -14,37 +27,44 @@ One button per platform. Real dollar amounts. No API keys.
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/narlei/ulanzideck-ai-cost/main/install.sh)"
 ```
 
-Requires macOS and [Ulanzi Studio](https://www.ulanzi.com/pages/download) already installed.
+> **Requirements:** macOS · [Ulanzi Studio](https://www.ulanzi.com/pages/download) · Node.js ≥ 22
 
-> **Node.js ≥ 22 required** — the plugin reads your local AI session files using [codeburn](https://github.com/getagentseal/codeburn). If you use Claude Code, Codex, or Cursor you almost certainly have it. Check with `node --version`. Install via `brew install node` if needed.
-
----
-
-## What it does
-
-Drag a button to your deck, open the property inspector, and configure:
-
-| Setting | Options | Default |
-|---|---|---|
-| **Platform** | Claude, Codex, Cursor, Gemini, Copilot, Total, and 6 others | Claude |
-| **Period** | Today, Last 7 days, This month, Last 30 days, All time | Today |
-| **Limit (USD)** | Any dollar amount — `0` = no limit | 0 (off) |
-
-**Without a limit** — the button shows the cost value in your platform's brand color on a dark background.
-
-**With a limit** — the background becomes a progress bar that fills as you spend. Colors shift from green → yellow → orange → red as you approach the limit.
-
-Click any button to force an immediate refresh. Data is collected every 15 minutes in the background — one scan feeds all your buttons.
+That's it. One command, no configuration files, no API keys.
 
 ---
 
-## Setup
+## How it works
 
-The plugin reads cost data locally from your AI tools' session files. No accounts, no API keys, no internet connection needed for cost data.
+Drag a button to your deck → open the property inspector → pick a platform and time period.
 
-What each platform needs on disk:
+| Setting | Options |
+|---|---|
+| **Platform** | Claude, Codex, Cursor, Gemini, Copilot, Total, and 6 others |
+| **Period** | Today · Last 7 days · This month · Last 30 days · All time |
+| **Spend limit** | Any dollar amount — leave at `0` to disable |
 
-| Platform | Where codeburn reads from |
+### Without a limit
+
+The button shows your current spend in the platform's brand color on a dark background.
+
+### With a limit — the button becomes a progress bar
+
+The background fills as you spend. Colors shift automatically:
+
+```
+0% ──── 50% ──── 75% ──── 90% ──── 100%
+🟢 green  🟡 yellow  🟠 orange  🔴 red
+```
+
+Click any button to force an immediate refresh. The plugin scans in the background every 15 minutes — one scan feeds all your buttons.
+
+---
+
+## Privacy
+
+All cost data is read **locally** from your AI tools' session files. Nothing leaves your machine.
+
+| Platform | Where data comes from |
 |---|---|
 | Claude Code | `~/.claude/projects/` |
 | Codex | `~/.codex/sessions/` |
@@ -52,51 +72,52 @@ What each platform needs on disk:
 | Gemini | `~/.gemini/` |
 | Copilot | VS Code extension data |
 
-If a platform hasn't been used, its button shows `—` (no data). That's expected.
-
-### Node.js not found?
-
-The plugin spawns a child `node` process to run codeburn. If you see a ⚠ Setup button, click it — it opens this guide. Then verify:
-
-```bash
-# check version (need ≥ 22)
-node --version
-
-# install or upgrade via Homebrew
-brew install node
-```
-
-The plugin probes `/opt/homebrew/bin/node`, `/usr/local/bin/node`, and `/usr/bin/node` automatically — no PATH configuration needed.
+If a platform hasn't been used yet, its button shows `—`. That's expected.
 
 ---
 
-## Manual install / development
+## Troubleshooting
+
+**⚠ Setup button appears on your deck**
+
+The plugin couldn't find Node.js. Click the button — it opens this guide. Then:
+
+```bash
+node --version        # needs to be v22 or higher
+brew install node     # install or upgrade via Homebrew
+```
+
+The plugin probes `/opt/homebrew/bin/node`, `/usr/local/bin/node`, and `/usr/bin/node` automatically — no PATH changes needed.
+
+---
+
+## Development
 
 ```bash
 git clone https://github.com/narlei/ulanzideck-ai-cost
 cd ulanzideck-ai-cost
-make install   # installs deps + syncs to UlanziDeck + restarts Ulanzi Studio
+make install   # install deps + sync to UlanziDeck + restart Ulanzi Studio
 ```
 
-Other make targets:
+Other targets:
 
-```bash
-make package      # build distributable ZIP → dist/
-make sync         # sync files without restarting
-make restart      # restart Ulanzi Studio only
-make bump_patch   # bump version (patch/minor/major)
-```
+| Command | What it does |
+|---|---|
+| `make package` | Build distributable ZIP → `dist/` |
+| `make sync` | Sync files without restarting |
+| `make restart` | Restart Ulanzi Studio only |
+| `make bump_patch` | Bump version (patch / minor / major) |
 
 ---
 
 ## Credits
 
-Cost calculation is powered by the open-source **[codeburn](https://github.com/getagentseal/codeburn)** (MIT) — a CLI that reads AI session files and calculates spend using LiteLLM pricing data. AI Cost Monitor embeds codeburn as a dependency; it is an independent plugin by Narlei Moreira.
+Cost calculation is powered by **[codeburn](https://github.com/getagentseal/codeburn)** (MIT) — an open-source CLI that reads AI session files and calculates spend using LiteLLM pricing data.
 
-See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) for the full codeburn license text.
+AI Cost Monitor embeds codeburn as a dependency and is an independent plugin by [Narlei Moreira](https://github.com/narlei).
+
+See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) for the full license text.
 
 ---
-
-## License
 
 MIT © Narlei Moreira
