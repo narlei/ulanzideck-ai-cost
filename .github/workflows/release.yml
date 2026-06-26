@@ -50,6 +50,19 @@ jobs:
           gh release create "v$VERSION" \
             --repo "$GITHUB_REPOSITORY" \
             --title "v$VERSION" \
-            --notes-file release_notes.md \
+            --notes "## Install
+
+\`\`\`bash
+/bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/narlei/ulanzideck-ai-cost/main/install.sh)\"
+\`\`\`
+
+Requires macOS and [Ulanzi Studio](https://www.ulanzi.com/pages/download). Node.js ≥ 22 must be available (\`brew install node\`).
+
+## What's included
+
+- One button per AI platform (Claude, Codex, Cursor, Gemini, Copilot, and more)
+- Real dollar amounts read locally — no API keys, nothing leaves your machine
+- Optional spend limit with live progress bar (green → yellow → orange → red)
+- Data refreshes every 15 minutes in the background; click any button to force a refresh" \
             --latest \
             dist/com.narlei.aicost.ulanziPlugin.zip
