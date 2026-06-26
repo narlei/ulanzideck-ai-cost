@@ -4,10 +4,6 @@ See how much you're spending on AI coding tools — right on your desk.
 
 One button per platform. Real dollar amounts. No API keys.
 
-![AI Cost Monitor](com.narlei.aicost.ulanziPlugin/resources/icon.svg)
-
----
-
 ![Plugin in action](docs/example.png)
 
 ---
