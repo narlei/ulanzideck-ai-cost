@@ -1,0 +1,19 @@
+# dependencies (bundled in release zip, not tracked in git)
+node_modules/
+
+# build output
+dist/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# logs
+*.log
+
+# local dev overrides
+.env
+.env.local
+
+# plan (internal, not for public repo)
+PLAN.md

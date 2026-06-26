@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Antigravity: upward arrow concept -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#a78bfa" stroke-width="6"/>
+  <polygon points="50,20 28,58 72,58" fill="#a78bfa"/>
+  <rect x="43" y="58" width="14" height="22" rx="3" fill="#a78bfa"/>
+</svg>

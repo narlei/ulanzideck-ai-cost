@@ -1,0 +1,35 @@
+{
+  "UUID": "com.narlei.aicost.plugin",
+  "Name": "AI Cost Monitor",
+  "Description": "Show how much you spend on AI coding tools (Claude, Codex, Cursor, Gemini, Copilot and more) right on your Ulanzi Deck. One button per platform plus a Total. Cost data is read locally — no API keys needed. Cost calculation powered by the open-source codeburn (MIT).",
+  "Author": "Narlei Moreira",
+  "Version": "1.0.0",
+  "Icon": "resources/icon.png",
+  "Category": "AI Cost",
+  "CategoryIcon": "resources/icon.png",
+  "CodePath": "plugin/app.js",
+  "Type": "JavaScript",
+  "PrivateAPI": true,
+  "SupportedInMultiActions": false,
+  "Actions": [
+    {
+      "Name": "AI Cost Monitor",
+      "Tooltip": "Show AI coding cost. Configure platform, period, and optional spending limit in the inspector.",
+      "Icon": "resources/action-generic.png",
+      "PropertyInspectorPath": "property-inspector/inspector.html",
+      "UUID": "com.narlei.aicost.plugin.monitor",
+      "States": [{ "Image": "resources/action-generic.png" }],
+      "SupportedInMultiActions": false,
+      "Controllers": ["Keypad"]
+    }
+  ],
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.15"
+    }
+  ],
+  "Software": {
+    "MinVersion": "3.0.11"
+  }
+}

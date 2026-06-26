@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Aider brand: terminal green, text-based logo -->
+  <rect x="8" y="8" width="84" height="84" rx="12" fill="none" stroke="#14b014" stroke-width="5"/>
+  <text x="50" y="68" font-family="monospace,Courier,sans-serif" font-size="52" font-weight="700" text-anchor="middle" fill="#14b014">A</text>
+</svg>

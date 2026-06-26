@@ -1,0 +1,39 @@
+<svg viewBox="0 0 128 128" width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <!-- background -->
+  <rect width="128" height="128" rx="26" fill="#1a1a1e"/>
+
+  <!-- chip outline -->
+  <rect x="28" y="28" width="72" height="72" rx="10" fill="none" stroke="#6366f1" stroke-width="2.5"/>
+
+  <!-- pins left -->
+  <line x1="12" y1="46" x2="28" y2="46" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  <line x1="12" y1="64" x2="28" y2="64" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  <line x1="12" y1="82" x2="28" y2="82" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  <!-- pins right -->
+  <line x1="100" y1="46" x2="116" y2="46" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  <line x1="100" y1="64" x2="116" y2="64" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  <line x1="100" y1="82" x2="116" y2="82" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  <!-- pins top -->
+  <line x1="46" y1="12" x2="46" y2="28" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  <line x1="64" y1="12" x2="64" y2="28" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  <line x1="82" y1="12" x2="82" y2="28" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  <!-- pins bottom -->
+  <line x1="46" y1="100" x2="46" y2="116" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  <line x1="64" y1="100" x2="64" y2="116" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+  <line x1="82" y1="100" x2="82" y2="116" stroke="#6366f1" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- flame clipped to chip interior -->
+  <clipPath id="chip">
+    <rect x="28" y="28" width="72" height="72" rx="10"/>
+  </clipPath>
+  <g clip-path="url(#chip)">
+    <!-- glow -->
+    <ellipse cx="64" cy="88" rx="22" ry="12" fill="#92400e" opacity="0.45"/>
+    <!-- outer flame -->
+    <path d="M64 92 C53 84 48 72 52 58 C54 50 60 44 60 44 C58 53 62 57 64 52 C66 46 64 37 69 30 C70 41 77 46 77 56 C78 64 74 80 64 92 Z" fill="#F59E0B"/>
+    <!-- mid flame -->
+    <path d="M64 89 C55 82 51 72 54 62 C55 56 60 51 60 51 C59 57 61 61 64 57 C67 53 66 45 69 40 C70 49 75 53 75 62 C75 70 71 82 64 89 Z" fill="#FCD34D"/>
+    <!-- core -->
+    <path d="M64 86 C58 79 56 72 58 65 C59 61 62 57 63 57 C62 62 63 65 65 62 C67 59 66 53 68 49 C69 56 72 59 71 65 C70 72 67 79 64 86 Z" fill="#fff7ed"/>
+  </g>
+</svg>
