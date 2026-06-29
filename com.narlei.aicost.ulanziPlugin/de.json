@@ -1,0 +1,24 @@
+{
+  "Name": "AI Cost Monitor",
+  "Description": "Zeigt direkt auf deinem Ulanzi Deck, wie viel du für KI-Coding-Tools (Claude, Codex, Cursor, Gemini, Copilot und mehr) ausgibst. Eine Taste pro Plattform plus eine Gesamtsumme (Total). Kostendaten werden lokal gelesen – keine API-Schlüssel nötig. Kostenberechnung basiert auf dem Open-Source-Projekt codeburn (MIT).",
+  "Actions": [
+    {
+      "Name": "AI Cost Monitor",
+      "Tooltip": "Zeigt KI-Coding-Kosten an. Plattform, Zeitraum und optionales Ausgabenlimit im Inspector konfigurieren."
+    }
+  ],
+  "Localization": {
+    "platformLabel": "Plattform",
+    "optTotal": "Gesamt (alle Plattformen)",
+    "periodLabel": "Zeitraum",
+    "periodToday": "Heute",
+    "periodWeek": "Letzte 7 Tage",
+    "periodMonth": "Dieser Monat",
+    "period30": "Letzte 30 Tage",
+    "periodAll": "Gesamter Zeitraum",
+    "periodHint": "Längere Zeiträume brauchen beim ersten Laden mehr Zeit zum Scannen.",
+    "limitLabel": "Limit (USD, 0 = keins)",
+    "limitHint": "Wenn gesetzt, wird ein Fortschrittsbalken zu deinem Ausgabenziel angezeigt.",
+    "privacyNote": "Kostendaten werden über <a href=\"#\" id=\"cb-link\">codeburn</a> (MIT) lokal aus den Sitzungsdateien der KI-Tools gelesen. Keine API-Schlüssel erforderlich."
+  }
+}

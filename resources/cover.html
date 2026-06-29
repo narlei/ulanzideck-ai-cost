@@ -1,0 +1,69 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="buttons/buttons.css">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:800px; height:400px; overflow:hidden; }
+  body { font-family:'Manrope',-apple-system,sans-serif;
+    background:radial-gradient(700px 500px at 20% 0%, #20242c 0%, #14161b 50%, #0d0e12 100%);
+    color:#fff; display:flex; align-items:center; }
+  .grain { position:absolute; inset:0;
+    background:radial-gradient(circle at 18% 20%, rgba(91,140,255,.10), transparent 42%),
+               radial-gradient(circle at 86% 88%, rgba(255,120,80,.08), transparent 46%); }
+  .left { position:relative; width:47%; padding:0 24px 0 48px; }
+  .brandrow { display:flex; align-items:center; gap:13px; }
+  .mark { width:50px; height:50px; border-radius:13px; background:#16171c;
+    border:1px solid rgba(255,255,255,.08); background-size:cover;
+    box-shadow:0 8px 22px rgba(0,0,0,.5); }
+  .brandtxt h1 { font-family:'Space Grotesk'; font-size:25px; font-weight:700; letter-spacing:-.5px; }
+  .brandtxt p { font-size:12px; color:#8b93a3; font-weight:600; letter-spacing:.3px; margin-top:1px; }
+  .tag { margin-top:24px; font-family:'Space Grotesk'; font-size:37px; font-weight:700;
+    letter-spacing:-1.2px; line-height:1.05; }
+  .tag .accent { background:linear-gradient(90deg,#3ecf6b,#5b8cff);
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub { margin-top:13px; font-size:14px; color:#9aa2b1; font-weight:500; }
+  .chips { margin-top:18px; display:flex; gap:8px; }
+  .chip { font-size:11px; font-weight:600; color:#b9c0cd; padding:6px 12px;
+    border-radius:999px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.07); }
+
+  .right { position:relative; width:53%; height:100%; display:flex; align-items:center; justify-content:center; padding-right:36px; }
+  .deck { width:378px; border-radius:26px; padding:20px;
+    background:linear-gradient(160deg,#2a2d35 0%, #202329 60%, #191b20 100%);
+    border:1px solid rgba(255,255,255,.07);
+    box-shadow:0 34px 70px -18px rgba(0,0,0,.75), inset 0 1px 0 rgba(255,255,255,.05); }
+  .ustudio { text-align:center; color:#6b7280; font-family:'Space Grotesk';
+    font-weight:600; font-size:11px; letter-spacing:4px; margin-bottom:14px; }
+  .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+  .key { aspect-ratio:1; border-radius:13px; background:#0c0d10 center/cover no-repeat;
+    border:1px solid rgba(255,255,255,.05);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.02), 0 5px 12px rgba(0,0,0,.4); }
+  .empty { background:#0c0d10; }
+  .k-claude{background-image:var(--btn-claude)} .k-cursor{background-image:var(--btn-cursor)}
+  .k-total{background-image:var(--btn-total)} .k-limit{background-image:var(--btn-limit-80)}
+</style></head>
+<body>
+  <div class="grain"></div>
+  <div class="left">
+    <div class="brandrow">
+      <div class="mark" style="background-image:url(../com.narlei.aicost.ulanziPlugin/resources/icon.svg)"></div>
+      <div class="brandtxt"><h1>AI Cost Monitor</h1><p>UlanziDeck · macOS</p></div>
+    </div>
+    <div class="tag">Your AI spend.<br><span class="accent">On your desk.</span></div>
+    <div class="sub">Real dollars · per platform · live progress bars</div>
+    <div class="chips"><div class="chip">Zero API keys</div><div class="chip">100% local</div><div class="chip">11 platforms</div></div>
+  </div>
+  <div class="right">
+    <div class="deck">
+      <div class="ustudio">U · STUDIO</div>
+      <div class="grid">
+        <div class="key k-claude"></div>
+        <div class="key k-cursor"></div>
+        <div class="key k-total"></div>
+        <div class="key k-limit"></div>
+        <div class="key empty"></div><div class="key empty"></div>
+        <div class="key empty"></div><div class="key empty"></div>
+      </div>
+    </div>
+  </div>
+</body></html>

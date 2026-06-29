@@ -1,0 +1,61 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="buttons/buttons.css">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1200px; height:800px; overflow:hidden; }
+  body { font-family:'Manrope',-apple-system,sans-serif;
+    background:radial-gradient(900px 600px at 80% 0%, #20242c 0%, #14161b 50%, #0d0e12 100%);
+    color:#fff; display:flex; flex-direction:column; padding:72px 80px; }
+  .head { text-align:center; }
+  .eyebrow { display:inline-flex; align-items:center; gap:9px; font-size:14px; font-weight:600;
+    color:#9aa2b1; letter-spacing:.5px; margin-bottom:18px; }
+  .dot { width:9px; height:9px; border-radius:50%; background:#e3434c; box-shadow:0 0 12px #e3434c; }
+  h1 { font-family:'Space Grotesk'; font-size:56px; font-weight:700; letter-spacing:-1.5px; line-height:1.04; }
+  h1 .accent { background:linear-gradient(90deg,#3ecf6b,#e3b341,#e3434c);
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .lead { margin-top:18px; font-size:19px; color:#aab1c0; font-weight:500; }
+
+  .stage { flex:1; display:flex; align-items:center; justify-content:center; gap:28px; }
+  .step { display:flex; flex-direction:column; align-items:center; gap:16px; }
+  .pct { font-family:'Space Grotesk'; font-size:15px; font-weight:600; color:#8b93a3; }
+  .key { width:158px; height:158px; border-radius:22px; background:#0c0d10 center/cover no-repeat;
+    border:1px solid rgba(255,255,255,.07);
+    box-shadow:0 22px 50px -12px rgba(0,0,0,.7); }
+  .k1{background-image:var(--btn-limit-25)} .k2{background-image:var(--btn-limit-55)}
+  .k3{background-image:var(--btn-limit-80)} .k4{background-image:var(--btn-limit-100)}
+  .arrow { color:#4b5160; font-size:28px; align-self:center; margin-top:26px; }
+
+  .foot { display:flex; align-items:center; justify-content:center; gap:30px; margin-top:6px; }
+  .pill { display:flex; align-items:center; gap:10px; font-size:15px; font-weight:600; color:#c2c8d4; }
+  .pill .gi { width:24px; height:24px; border-radius:8px; background:rgba(255,255,255,.06);
+    display:flex; align-items:center; justify-content:center; }
+  .pill .gi svg { width:14px; height:14px; }
+  .sep { width:1px; height:20px; background:rgba(255,255,255,.12); }
+</style></head>
+<body>
+  <div class="head">
+    <div class="eyebrow"><span class="dot"></span> SPEND LIMITS</div>
+    <h1>Set a limit. <span class="accent">Stay in control.</span></h1>
+    <div class="lead">The button becomes a progress bar — it fills and shifts color as you near your cap.</div>
+  </div>
+
+  <div class="stage">
+    <div class="step"><div class="key k1"></div><div class="pct">25% · safe</div></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="key k2"></div><div class="pct">55% · watch</div></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="key k3"></div><div class="pct">80% · close</div></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="key k4"></div><div class="pct">100% · over</div></div>
+  </div>
+
+  <div class="foot">
+    <div class="pill"><span class="gi"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="11" width="14" height="9" rx="2" stroke="#9aa2b1" stroke-width="2"/><path d="M8 11V8a4 4 0 018 0v3" stroke="#9aa2b1" stroke-width="2"/></svg></span> Reads session files locally</div>
+    <div class="sep"></div>
+    <div class="pill"><span class="gi"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z" stroke="#9aa2b1" stroke-width="2" stroke-linejoin="round"/></svg></span> Zero API keys</div>
+    <div class="sep"></div>
+    <div class="pill"><span class="gi"><svg viewBox="0 0 24 24" fill="none"><path d="M12 7v5l3 2" stroke="#9aa2b1" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="8" stroke="#9aa2b1" stroke-width="2"/></svg></span> Auto-refresh every 15 min</div>
+  </div>
+</body></html>

@@ -1,0 +1,24 @@
+{
+  "Name": "AI Cost Monitor",
+  "Description": "Show how much you spend on AI coding tools (Claude, Codex, Cursor, Gemini, Copilot and more) right on your Ulanzi Deck. One button per platform plus a Total. Cost data is read locally — no API keys needed. Cost calculation powered by the open-source codeburn (MIT).",
+  "Actions": [
+    {
+      "Name": "AI Cost Monitor",
+      "Tooltip": "Show AI coding cost. Configure platform, period, and optional spending limit in the inspector."
+    }
+  ],
+  "Localization": {
+    "platformLabel": "Platform",
+    "optTotal": "Total (all platforms)",
+    "periodLabel": "Period",
+    "periodToday": "Today",
+    "periodWeek": "Last 7 days",
+    "periodMonth": "This month",
+    "period30": "Last 30 days",
+    "periodAll": "All time",
+    "periodHint": "Longer periods take more time to scan on first load.",
+    "limitLabel": "Limit (USD, 0 = none)",
+    "limitHint": "When set, shows a progress bar toward your spending goal.",
+    "privacyNote": "Cost data is read locally from AI tool session files via <a href=\"#\" id=\"cb-link\">codeburn</a> (MIT). No API keys required."
+  }
+}

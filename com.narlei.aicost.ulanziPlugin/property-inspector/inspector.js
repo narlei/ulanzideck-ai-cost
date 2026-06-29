@@ -45,6 +45,7 @@ document.getElementById('provider').addEventListener('change', saveSettings);
 document.getElementById('period').addEventListener('change', saveSettings);
 document.getElementById('limit').addEventListener('change', saveSettings);
 
-document.getElementById('cb-link').addEventListener('click', (e) => {
-  e.preventDefault();
+// Delegated so it survives localizeUI() re-rendering the privacy note innerHTML.
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'cb-link') e.preventDefault();
 });

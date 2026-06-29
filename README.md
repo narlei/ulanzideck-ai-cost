@@ -4,7 +4,7 @@
 
 Real dollar amounts. Per platform. Live progress bars. Zero API keys.
 
-![Plugin in action](docs/example.png)
+![Plugin in action](resources/cover.png)
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)]()

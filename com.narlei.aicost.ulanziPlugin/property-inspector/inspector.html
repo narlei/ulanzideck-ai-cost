@@ -20,9 +20,9 @@
     <form id="property-inspector">
       <div class="panel">
         <div class="field">
-          <label>Platform</label>
+          <label data-localize="platformLabel">Platform</label>
           <select id="provider">
-            <option value="total">Total (all platforms)</option>
+            <option value="total" data-localize="optTotal">Total (all platforms)</option>
             <option value="aider">Aider</option>
             <option value="antigravity">Antigravity</option>
             <option value="claude" selected>Claude</option>
@@ -37,23 +37,23 @@
           </select>
         </div>
         <div class="field">
-          <label>Period</label>
+          <label data-localize="periodLabel">Period</label>
           <select id="period">
-            <option value="today" selected>Today</option>
-            <option value="week">Last 7 days</option>
-            <option value="month">This month</option>
-            <option value="30days">Last 30 days</option>
-            <option value="all">All time</option>
+            <option value="today" selected data-localize="periodToday">Today</option>
+            <option value="week" data-localize="periodWeek">Last 7 days</option>
+            <option value="month" data-localize="periodMonth">This month</option>
+            <option value="30days" data-localize="period30">Last 30 days</option>
+            <option value="all" data-localize="periodAll">All time</option>
           </select>
-          <p class="hint">Longer periods take more time to scan on first load.</p>
+          <p class="hint" data-localize="periodHint">Longer periods take more time to scan on first load.</p>
         </div>
         <div class="field">
-          <label>Limit (USD, 0 = none)</label>
+          <label data-localize="limitLabel">Limit (USD, 0 = none)</label>
           <input type="number" id="limit" min="0" step="1" value="0" placeholder="0">
-          <p class="hint">When set, shows a progress bar toward your spending goal.</p>
+          <p class="hint" data-localize="limitHint">When set, shows a progress bar toward your spending goal.</p>
         </div>
         <hr class="divider">
-        <p class="hint">Cost data is read locally from AI tool session files via <a href="#" id="cb-link">codeburn</a> (MIT). No API keys required.</p>
+        <p class="hint" data-localize="privacyNote">Cost data is read locally from AI tool session files via <a href="#" id="cb-link">codeburn</a> (MIT). No API keys required.</p>
       </div>
     </form>
   </div>
