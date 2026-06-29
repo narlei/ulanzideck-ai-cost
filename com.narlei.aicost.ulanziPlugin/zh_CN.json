@@ -1,0 +1,24 @@
+{
+  "Name": "AI Cost Monitor",
+  "Description": "在 Ulanzi Deck 上直接查看你在 AI 编程工具（Claude、Codex、Cursor、Gemini、Copilot 等）上的花费。每个平台一个按键，外加一个合计（Total）。花费数据在本地读取——无需 API 密钥。花费计算由开源项目 codeburn（MIT）提供支持。",
+  "Actions": [
+    {
+      "Name": "AI Cost Monitor",
+      "Tooltip": "显示 AI 编程花费。在属性检查器中配置平台、时间范围和可选的支出上限。"
+    }
+  ],
+  "Localization": {
+    "platformLabel": "平台",
+    "optTotal": "合计（所有平台）",
+    "periodLabel": "时间范围",
+    "periodToday": "今天",
+    "periodWeek": "近 7 天",
+    "periodMonth": "本月",
+    "period30": "近 30 天",
+    "periodAll": "全部时间",
+    "periodHint": "时间范围越长，首次加载扫描所需时间越久。",
+    "limitLabel": "上限（美元，0 = 不限）",
+    "limitHint": "设置后，会显示朝向支出目标的进度条。",
+    "privacyNote": "花费数据通过 <a href=\"#\" id=\"cb-link\">codeburn</a>（MIT）从 AI 工具的会话文件本地读取。无需 API 密钥。"
+  }
+}

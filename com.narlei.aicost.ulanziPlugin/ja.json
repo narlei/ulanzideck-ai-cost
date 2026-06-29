@@ -1,0 +1,24 @@
+{
+  "Name": "AI Cost Monitor",
+  "Description": "AI コーディングツール（Claude、Codex、Cursor、Gemini、Copilot など）の支出を Ulanzi Deck に直接表示します。プラットフォームごとに 1 つのボタンと、合計（Total）ボタン。支出データはローカルで読み取られ、API キーは不要です。支出計算はオープンソースの codeburn（MIT）を利用しています。",
+  "Actions": [
+    {
+      "Name": "AI Cost Monitor",
+      "Tooltip": "AI コーディングの支出を表示します。プラットフォーム、期間、任意の支出上限をインスペクターで設定します。"
+    }
+  ],
+  "Localization": {
+    "platformLabel": "プラットフォーム",
+    "optTotal": "合計（全プラットフォーム）",
+    "periodLabel": "期間",
+    "periodToday": "今日",
+    "periodWeek": "過去 7 日間",
+    "periodMonth": "今月",
+    "period30": "過去 30 日間",
+    "periodAll": "全期間",
+    "periodHint": "期間が長いほど、初回読み込み時のスキャンに時間がかかります。",
+    "limitLabel": "上限（USD、0 = なし）",
+    "limitHint": "設定すると、支出目標に対する進捗バーが表示されます。",
+    "privacyNote": "支出データは <a href=\"#\" id=\"cb-link\">codeburn</a>（MIT）を通じて AI ツールのセッションファイルからローカルで読み取られます。API キーは不要です。"
+  }
+}
