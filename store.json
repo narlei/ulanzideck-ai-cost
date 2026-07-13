@@ -1,0 +1,16 @@
+{
+  "cover": "resources/cover.png",
+  "screenshots": [
+    "resources/cover.png",
+    "resources/banner1.png",
+    "resources/banner2.png",
+    "resources/banner3.png"
+  ],
+  "longDescription": "Show how much you spend on AI coding tools (Claude, Codex, Cursor, Gemini, Copilot and more) right on your Ulanzi Deck. One button per platform plus a Total. Cost data is read locally — no API keys needed. Cost calculation powered by the open-source codeburn (MIT).",
+  "deviceTypes": [
+    "deck"
+  ],
+  "tags": [
+    "devtools"
+  ]
+}
