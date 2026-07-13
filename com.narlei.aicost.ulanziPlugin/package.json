@@ -1,6 +1,6 @@
 {
   "name": "ai-cost-monitor",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Ulanzi Deck plugin that displays AI coding tool costs on your deck buttons.",
   "author": "Narlei Moreira",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "start": "node plugin/app.js"
   },
   "dependencies": {
-    "ws": "8.18.0",
-    "codeburn": "0.9.14"
+    "ws": "8.21.0",
+    "codeburn": "0.9.15"
   }
 }
