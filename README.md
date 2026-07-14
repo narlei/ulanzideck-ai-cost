@@ -6,10 +6,10 @@ Real dollar amounts. Per platform. Live progress bars. Zero API keys.
 
 ![Plugin in action](resources/cover.png)
 
+[![Ulanzi Community Store](https://raw.githubusercontent.com/narlei/ulanzicommunitystore/main/docs/badges/ulanzi-community-store-shield.svg)](https://ulanzicommunitystore.narlei.com)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)]()
 [![Node.js](https://img.shields.io/badge/node-%E2%89%A522-brightgreen.svg)]()
-[![UlanziDeck](https://img.shields.io/badge/UlanziDeck-plugin-orange.svg)]()
 
 ---
 
